@@ -9,13 +9,14 @@ function getRandomNumber6() {
 }
 
 // Jouer un dé
-function rollDice() {
+// boardSelector contiendra le selecteur CSS du plateau dans lequel ajouter un dé
+function rollDice(boardSelector) {
   // creation de la div
   var diceElement = document.createElement("div");
   // ajout de la classe dice à la div
   diceElement.classList.add("dice");
-  // selection de l'id player et ajout de l'enfant diceElement
-  document.getElementById("player").appendChild(diceElement);
+  // selection de l'id : #player ou #dealer
+  document.querySelector(boardSelector).appendChild(diceElement);
 
   // On stocke le nombre aléatoire
   var randomNumber = getRandomNumber6();
@@ -38,11 +39,12 @@ function askDiceCount() {
   return diceCount;
 }
 
-// executer la fonction autant de fois que de dés demandés par l'utilisateur
+// Executer la fonction autant de fois que de dés demandés par l'utilisateur
 function play() {
   var diceCount = askDiceCount();
   for (var i = 0; i < diceCount; i++) {
-    rollDice();
+    rollDice('#player');
+    rollDice('#dealer');
   }
 }
 
