@@ -22,3 +22,6 @@ var randomNumber = getRandomNumber6();
 var decalage = (randomNumber - 1) * -100;
 // On decale l'image aléatoirement
 diceElement.style.backgroundPositionX = decalage + "px";
+
+// Demander à l'utilisateur combien de dés il veut lancer
+var diceCount = prompt('Combien de dés ?');
