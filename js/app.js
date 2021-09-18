@@ -12,7 +12,13 @@ function getRandomNumber(min, max) {
 
 // On ajoute une fonction pour tirer un nombre aléatoire entre 1 et 6
 function getRandomNumber6() {
-  console.log(getRandomNumber(1,6));
+  return getRandomNumber(1,6);
 }
 
-getRandomNumber6();
+// On stocke le nombre aléatoire
+var randomNumber = getRandomNumber6();
+
+// On se sert du nombre obtenu pour modifier la position de l'arrière plan du dé
+var decalage = (randomNumber - 1) * -100;
+// On decale l'image aléatoirement
+diceElement.style.backgroundPositionX = decalage + "px";
