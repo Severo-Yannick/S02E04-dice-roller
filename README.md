@@ -43,3 +43,6 @@
  - On pourrait pour cela ajouter un paramètre à notre fonction de génération de dé pour récuperer l'id de l'élément à cibler : soit la `div` avec l'id `player`, soit celle avec l'id `dealer`
 
  </details>
+
+ ## Ajouter d'un bouton "rejouer"
+ Ajout au challenge d'un bouton rejouer, au click sur le bouton rejouer on supprime la partie précédente et on lance une nouvelle partie :)
