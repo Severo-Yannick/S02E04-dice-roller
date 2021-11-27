@@ -48,4 +48,21 @@ function play() {
   }
 }
 
+// Nettoyer une partie
+function reset(player,dealer){
+  document.getElementById("player").innerHTML = "";
+  document.getElementById("dealer").innerHTML = "";
+}
+
+// Lancer une nouvelle partie
+function newGame(event) {
+  reset("player","dealer");
+  play();
+  event.stopPropagation();
+}
+
+// Bouton rejouer une partie
+var playButton = document.getElementById("play");
+playButton.addEventListener("click", newGame);
+
 play();
